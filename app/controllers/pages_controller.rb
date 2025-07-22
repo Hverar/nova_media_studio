@@ -1,13 +1,8 @@
 class PagesController < ApplicationController
-  def home
-  end
+  layout "application" # <== Add this if not already there
 
-  def services
-  end
-
-  def portfolio
-  end
-
-  def join
-  end
+  def home; end
+  def services; end
+  def portfolio; end
+  def join; end
 end

@@ -234,6 +234,9 @@ GEM
     stringio (3.1.7)
     thor (1.4.0)
     timeout (0.4.3)
+    turbolinks (5.2.1)
+      turbolinks-source (~> 5.2)
+    turbolinks-source (5.2.0)
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     web-console (4.2.1)
@@ -272,6 +275,7 @@ DEPENDENCIES
   rails (~> 7.1.5, >= 7.1.5.1)
   selenium-webdriver
   sprockets-rails
+  turbolinks (~> 5)
   tzinfo-data
   web-console
 

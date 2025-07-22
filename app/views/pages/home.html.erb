@@ -1,23 +1,25 @@
 <!-- Hero Banner with Navigation -->
-<div class="hero-banner">
-  <%= image_tag "banner.jpg", alt: "Banner" %>
+  <div class="hero-banner">
+    <%= image_tag "banner.jpg", alt: "Banner" %>
 
-  <div class="hero-overlay">
-    <!-- Navigation -->
-    <div class="hero-nav">
-      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
-      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
-      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
-    </div>
+    <div class="hero-overlay">
+      <!-- Navigation -->
+      <div class="hero-nav">
+        <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+        <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+        <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+        <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+      </div>
 
-    <!-- Centered Text -->
-    <div class="hero-text">
-      <h1>Your Web, Your Brand.</h1>
-      <p>Custom websites built for your business identity.</p>
+      <!-- Centered Text -->
+      <div class="hero-text">
+        <h1>Your Web, Your Brand.</h1>
+        <p>Custom websites built for your business identity.</p>
+        <a href="#" id="openModalBtn" class="cta-button hero-cta-button">Talk To An Expert</a>
+      </div>
     </div>
   </div>
-</div>
+
 
 <!-- Jump Button (Now centered and bigger) -->
 <div class="centered-block">
@@ -49,3 +51,27 @@
     <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
   </div>
 </footer>
+
+<!-- Modal -->
+<div id="expertModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModalBtn">&times;</button>
+    <h3>FREE QUOTE</h3>
+
+    <form>
+      <label>First name *</label>
+      <input type="text" required>
+
+      <label>Email *</label>
+      <input type="email" required>
+
+      <label>Phone</label>
+      <input type="text">
+
+      <label>Tell us about your project *</label>
+      <input type="text">
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
+</div>

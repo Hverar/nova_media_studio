@@ -65,7 +65,31 @@
 
 <div class="cta-box">
   <h2>NEED A WEBSITE? WANT TO REALIZE YOUR IDEA?</h2>
-  <a href="#" class="cta-button">Talk To An Expert</a>
+  <a href="#" id="openModalBtn" class="cta-button">Talk To An Expert</a>
+</div>
+
+<!-- Modal -->
+<div id="expertModal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <button class="modal-close" id="closeModalBtn">&times;</button>
+    <h3>FREE QUOTE</h3>
+
+    <form>
+      <label>First name *</label>
+      <input type="text" required>
+
+      <label>Email *</label>
+      <input type="email" required>
+
+      <label>Phone</label>
+      <input type="text">
+
+      <label>Tell us about your project *</label>
+      <input type="text">
+
+      <button type="submit" class="btn-submit">Submit</button>
+    </form>
+  </div>
 </div>
 
 
