@@ -1,2 +1,51 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<!-- Hero Banner with Navigation -->
+<div class="hero-banner">
+  <%= image_tag "banner.jpg", alt: "Banner" %>
+
+  <div class="hero-overlay">
+    <!-- Navigation -->
+    <div class="hero-nav">
+      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+    </div>
+
+    <!-- Centered Text -->
+    <div class="hero-text">
+      <h1>Your Web, Your Brand.</h1>
+      <p>Custom websites built for your business identity.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Jump Button (Now centered and bigger) -->
+<div class="centered-block">
+  <a href="#services" class="scroll-button">Our Professional Services</a>
+</div>
+
+<!-- Placeholder Sections -->
+<div id="services" class="section" style="background-color: #f3f4f6;">
+  <h2>Our Services</h2>
+  <p>[Describe your services here]</p>
+</div>
+
+<div id="portfolio" class="section" style="background-color: #fff;">
+  <h2>Portfolio</h2>
+  <p>[Showcase your work here]</p>
+</div>
+
+<div id="join" class="section" style="background-color: #f3f4f6;">
+  <h2>Join Us</h2>
+  <p>[Invite collaborators or team here]</p>
+</div>
+
+<!-- Footer -->
+<footer class="footer-dark">
+  <div class="footer-content">
+    <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
+      Follow us on Facebook
+    </a>
+    <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
+  </div>
+</footer>

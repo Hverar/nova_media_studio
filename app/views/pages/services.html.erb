@@ -1,0 +1,80 @@
+<!-- Hero Banner with Navigation -->
+<div class="hero-banner">
+  <%= image_tag "banner.jpg", alt: "Banner" %>
+
+  <div class="hero-overlay">
+    <!-- Navigation -->
+    <div class="hero-nav">
+      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+    </div>
+
+    <!-- Centered Text -->
+    <div class="hero-text">
+      <h1>OUR SERVICES.</h1>
+      <p>A DEDICATED TEAM TO MAKE YOUR IDEA, REALITY.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Website Services Highlight -->
+  <section class="highlight-section">
+    <p class="highlight-text">
+      Elevate your online presence with our custom website design service. We deliver end-to-end solutions — including design, development, and optimization — crafted to reflect your brand’s identity and engage your audience. Every site is responsive, scalable, and tailored to your goals.
+    </p>
+  </section>
+
+  <!-- Website Creation Steps -->
+<div class="creation-steps">
+
+  <!-- Step 1 -->
+  <div class="step-card" data-aos="fade-right">
+    <div class="step-text">
+      <h3>STEP 1: BRAINSTORM & DESIGN</h3>
+      <p>We kick off every project with discovery and planning sessions to understand your brand. Then we design a unique layout tailored to your goals and style.</p>
+    </div>
+    <div class="step-image">
+      <%= image_tag "design.jpg", alt: "Design phase" %>
+    </div>
+  </div>
+
+  <!-- Step 2 -->
+  <div class="step-card" data-aos="fade-left">
+    <div class="step-text">
+      <h3>STEP 2: DEVELOPMENT</h3>
+      <p>Our team codes your website using the latest tools and responsive frameworks. Every feature is carefully implemented to ensure performance and usability.</p>
+    </div>
+    <div class="step-image">
+      <%= image_tag "development.jpg", alt: "Development phase" %>
+    </div>
+  </div>
+
+  <!-- Step 3 -->
+  <div class="step-card" data-aos="fade-right">
+    <div class="step-text">
+      <h3>STEP 3: HOSTING & LAUNCH</h3>
+      <p>Once approved, we take care of deployment and hosting. Your website goes live, fast and secure, ready to serve your visitors around the clock.</p>
+    </div>
+    <div class="step-image">
+      <%= image_tag "hosting.jpg", alt: "Hosting phase" %>
+    </div>
+  </div>
+</div>
+
+<div class="cta-box">
+  <h2>NEED A WEBSITE? WANT TO REALIZE YOUR IDEA?</h2>
+  <a href="#" class="cta-button">Talk To An Expert</a>
+</div>
+
+
+<!-- Footer -->
+<footer class="footer-dark">
+  <div class="footer-content">
+    <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
+      Follow us on Facebook
+    </a>
+    <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
+  </div>
+</footer>

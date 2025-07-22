@@ -2,9 +2,12 @@ class PagesController < ApplicationController
   def home
   end
 
-  def about
+  def services
   end
 
-  def contact
+  def portfolio
+  end
+
+  def join
   end
 end
