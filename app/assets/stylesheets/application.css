@@ -75,19 +75,40 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: center;
   align-items: center;
   height: 100%;
+  padding-bottom: 4rem; /* 👈 pushes everything slightly upward */
 }
 
+.hero-text .cta-button {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #1c1f14;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  margin-top: 30px; /* Add this to move the button lower */
+}
+
+
 .hero-text h1 {
-  font-size: 4.5rem;        /* BIGGER */
-  font-weight: 900;       /* BOLDER */
-  margin: 0;
+  font-size: 4.5rem;
+  font-weight: 900;
+  margin-bottom: 1rem; /* 👈 spacing below heading */
   line-height: 1.2;
 }
 
 .hero-text p {
-  font-size: 1.5rem;       /* slightly larger */
+  font-size: 1.5rem;
+  margin-bottom: 2.5rem; /* 👈 bigger gap between paragraph and button */
+}
+
+
+.hero-text p {
+  font-size: 1.5rem;
   margin-top: 0.5rem;
-  margin-bottom: 0;
+  margin-bottom: 1rem;
 }
 
 /* === SECTIONS === */
@@ -131,10 +152,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .centered-block {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  text-align: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
 }
+
+.centered-block p {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-top: 1rem;
+  color: #1a1a0f; /* or your dark green if you prefer */
+}
+
 
 
 .footer-dark {
@@ -213,6 +245,18 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.6;
 }
 
+.highlight-text {
+  font-size: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: right;
+  padding-right: 5vw;
+  padding-left: 15vw;
+  line-height: 1.6;
+}
+
+
+
 
 .creation-steps {
   display: flex;
@@ -263,13 +307,6 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-
-.step-image img {
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-}
-
 .cta-box {
   margin: 80px auto;
   padding: 40px 30px;
@@ -297,12 +334,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .cta-button {
   display: inline-block;
-  padding: 14px 28px;
-  font-size: 1rem;
+  padding: 16px 36px;
+  font-size: 1.1rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: white;
   background-color: #1c1f14;
+  color: white;
   border-radius: 999px;
   text-decoration: none;
   transition: background 0.3s ease;
@@ -399,4 +435,557 @@ h1, h2, h3, h4, h5, h6 {
 /* Hide modal initially */
 .hidden {
   display: none;
+}
+
+
+.contact-section {
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.contact-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.contact-header h2 {
+  font-size: 2rem;
+  color: #1c2c0f;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #222;
+}
+
+.contact-form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 0 20px;
+}
+
+.contact-form {
+  flex: 1 1 58%;
+  min-width: 300px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: none;
+  background: #f7f7f7;
+  border-radius: 8px;
+}
+
+.contact-form textarea {
+  height: 120px;
+  resize: none;
+}
+
+.contact-form button {
+  background: black;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 24px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact-info {
+  flex: 1 1 35%;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-box {
+  padding: 24px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+}
+
+.info-box i {
+  font-size: 1.5rem;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.info-box.black {
+  background: black;
+}
+
+.info-box.gray {
+  background: #555;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-form-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form, .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form form {
+    gap: 16px;
+  }
+}
+
+.contact-subtitle {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+.webprocess-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 4rem 2rem;
+}
+
+.webprocess-card {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  flex-wrap: wrap;
+}
+
+.webprocess-image-container {
+  flex: 1;
+  position: relative;
+}
+
+.webprocess-image {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+}
+
+.webprocess-label {
+  position: absolute;
+  bottom: 16px;
+  left: 16px;
+  background-color: #6caa2b;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.webprocess-steps {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.webprocess-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.webprocess-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.web-service-box {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  margin: 40px auto;
+  flex-wrap: wrap;
+  max-width: 1200px;
+}
+
+.web-service-image {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.web-service-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+.web-service-tag {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  background-color: #5d9f2c;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 14px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.web-service-steps {
+  flex: 1;
+  min-width: 300px;
+}
+
+.web-service-steps h3 {
+  font-weight: 800;
+  font-size: 2rem; /* was 1.5rem */
+  margin-bottom: 32px; /* was 24px */
+  color: #111;
+}
+
+.step-grid div {
+  font-size: 1.1rem; /* was 0.95rem */
+  line-height: 1.8;
+  padding: 12px 0;
+}
+
+.step-grid strong {
+  display: block;
+  font-size: 1.25rem; /* was 1rem */
+  font-weight: 700;
+  margin-bottom: 8px; /* was 6px */
+  color: #1a1a1a;
+}
+
+
+@media (max-width: 768px) {
+  .web-service-box {
+    flex-direction: column;
+    padding: 20px;
+  }
+}
+
+.step-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px 40px;
+}
+
+.step-card {
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.step-icon {
+  font-size: 1rem;
+  background-color: #efefef;
+  color: #1a1a1a;
+  padding: 8px;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.step-icon i {
+  font-size: 1.2rem;
+}
+
+.step-card strong {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111;
+}
+
+.step-card p {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.step-item strong {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #111;
+  display: block;
+}
+
+.step-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #333;
+}
+
+.about-heading {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.about-divider {
+  width: 120px; /* Longer line */
+  height: 3px;
+  background-color: #1a1a1a;
+  margin: 0 auto 24px auto;
+  border-radius: 2px;
+}
+
+.about-intro {
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.about-description {
+  font-size: 1.1rem;
+  font-weight: 500;
+  max-width: 850px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 1.8;
+}
+
+.quote-btn {
+  display: inline-block;
+  padding: 16px 36px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #1c1f14;
+  color: white;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.quote-btn:hover {
+  background-color: #333 !important;
+}
+
+.about-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.quote-box {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.quote-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* app/assets/stylesheets/application.css */
+/* === CLEANED THREE-CARD GALLERY CSS === */
+
+/* Use this new container class in your HTML: <div class="three-card-row"> */
+.three-card-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* INDIVIDUAL CARD STYLES */
+.gallery-card {
+  flex: 1;
+  min-width: 280px;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* IMAGE STYLES */
+.gallery-img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: #f4f4f4;
+  display: block;
+}
+
+/* CAPTION STYLING */
+.wp-caption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.wp-caption-text {
+  font-weight: bold;
+  font-style: italic;
+  color: #000000;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+/* LEFT CARD */
+.left-card .top-caption {
+  font-style: italic;
+  margin-bottom: 0.5rem;
+}
+
+/* MIDDLE CARD (lifted illusion) */
+.middle-card {
+  margin-top: -2.5rem;
+}
+
+.gallery-description p {
+  font-size: 0.95rem;
+  color: #000;
+  text-align: left;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+/* RIGHT CARD (delayed illusion) */
+.right-card {
+  padding-top: 60px;
+}
+
+/* MOBILE RESPONSIVENESS */
+@media (max-width: 768px) {
+  .three-card-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-card {
+    max-width: 100%;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
+  }
+
+  .middle-card {
+    margin-top: 0;
+  }
+
+  .right-card {
+    padding-top: 0;
+  }
+}
+
+/* KEEP THESE */
+.market-gallery {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.market-gallery__header h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+.hero-overlay {
+  z-index: 10;
+}
+
+.taller-card {
+  padding-top: 1; /* Increase as needed */
+}
+
+
+.footer-dark {
+  background-color: #000;
+  color: white;
+  padding: 40px 40px;
+  font-size: 0.875rem;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+}
+
+.footer-left a {
+  margin-right: 20px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.footer-center, .footer-right {
+  white-space: nowrap;
+}
+
+.facebook-button {
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #1877f2;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  position: relative;
+  top: -20px;
 }

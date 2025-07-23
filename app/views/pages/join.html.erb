@@ -1,1 +1,87 @@
-c
+<div class="hero-banner">
+  <%= image_tag "banner.jpg", alt: "Banner" %>
+
+  <div class="hero-overlay">
+    <!-- Navigation -->
+    <div class="hero-nav">
+      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+    </div>
+
+    <!-- Centered Text -->
+    <div class="hero-text">
+      <h1>JOIN US.</h1>
+      <p>HOW CAN WE HELP YOU ACHEIVE YOUR DREAMS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section">
+  <div class="contact-header">
+    <h2>HOW CAN WE HELP YOU ACHEIVE YOUR DREAMS.</h2>
+    <p class="contact-subtitle">Contact us for a free consultation!</p>
+  </div>
+
+  <div class="contact-form-wrapper container">
+    <!-- LEFT SIDE: FORM -->
+    <div class="contact-form">
+      <form>
+        <label>Name *</label>
+        <input type="text" name="first_name" required>
+
+        <label>Email *</label>
+        <input type="email" name="email" required>
+
+        <label>Phone *</label>
+        <input type="tel" name="phone" required>
+
+        <label>Tell us about your project *</label>
+        <textarea name="message" required></textarea>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+
+    <!-- RIGHT SIDE: CONTACT INFO -->
+    <div class="contact-info">
+      <div class="info-box black">
+        <i class="bi bi-envelope-fill"></i>
+        <p>Adresse e-mail</p>
+        <strong>Hverar@gmail.com</strong>
+      </div>
+
+      <div class="info-box gray">
+        <i class="bi bi-telephone-fill"></i>
+        <p>Numéro de téléphone</p>
+        <strong>(514) 571-2324</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer-dark">
+  <!-- Facebook Button Positioned Above Footer Content -->
+  <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
+    Follow us on Facebook
+  </a>
+
+  <!-- Main Footer Content -->
+  <div class="footer-content">
+    <div class="footer-left">
+      <%= link_to "Home", url_for(:root) %>
+      <%= link_to "Services", url_for(:services) %>
+      <%= link_to "Portfolio", url_for(:portfolio) %>
+      <%= link_to "Join us", url_for(:join) %>
+    </div>
+
+    <div class="footer-center">
+      <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
+    </div>
+
+    <div class="footer-right">
+      <p>Powered by NovaMedia Studio</p>
+    </div>
+  </div>
+</footer>

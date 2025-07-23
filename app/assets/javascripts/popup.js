@@ -1,23 +1,22 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const openBtn = document.getElementById("openModalBtn");
-  const closeBtn = document.getElementById("closeModalBtn");
+document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById("expertModal");
+  const openBtns = document.querySelectorAll("#openModalBtn, #openModalBtn2");
+  const closeBtn = document.getElementById("closeModalBtn");
 
-  if (openBtn && closeBtn && modal) {
-    openBtn.addEventListener("click", (e) => {
+  openBtns.forEach(btn => {
+    btn.addEventListener("click", function (e) {
       e.preventDefault();
       modal.classList.remove("hidden");
     });
+  });
 
-    closeBtn.addEventListener("click", () => {
+  closeBtn.addEventListener("click", function () {
+    modal.classList.add("hidden");
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target === modal) {
       modal.classList.add("hidden");
-    });
-
-    // Optional: close when clicking outside the modal content
-    modal.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.classList.add("hidden");
-      }
-    });
-  }
+    }
+  });
 });
