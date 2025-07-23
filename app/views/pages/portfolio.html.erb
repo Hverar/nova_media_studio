@@ -12,7 +12,7 @@
     </div>
 
     <!-- Centered Text -->
-    <div class="hero-text">
+    <div class="hero-text" data-aos="fade-left">
       <h1>OUR WORK.</h1>
       <p>WEBSITE CREATION.</p>
     </div>
@@ -21,37 +21,39 @@
 
 <!-- MARKET GALLERY -->
 <section class="market-gallery">
-  <div class="market-gallery__header">
+  <div class="market-gallery__header" data-aos="fade-right">
     <h2>Discover Our<br>Projects</h2>
   </div>
 
-  <div class="three-card-row">
-    <!-- Card 1: Share-a-meal -->
-    <div class="gallery-card">
-      <figure class="wp-caption">
-        <%= link_to image_tag("shareameal_logo.png", alt: "Share-a-meal", class: "gallery-img"), "https://www.shareameal.me/", target: "_blank", rel: "noopener" %>
-        <figcaption class="wp-caption-text">Share-a-meal</figcaption>
-      </figure>
-    </div>
+    <div class="three-card-row">
+      <!-- Card 1: Share-a-meal -->
+      <div class="gallery-card" data-aos="fade-right" data-aos-delay="200">
+        <figure class="wp-caption">
+          <%= link_to image_tag("shareameal_logo.png", alt: "Share-a-meal", class: "gallery-img"), "https://www.shareameal.me/", target: "_blank", rel: "noopener" %>
+          <figcaption class="wp-caption-text">Share-a-meal</figcaption>
+        </figure>
+      </div>
 
-    <!-- Card 2: Semper -->
-    <div class="gallery-card middle-card taller-card">
-      <figure class="wp-caption">
-        <%= link_to image_tag("semper.png", alt: "Semper", class: "gallery-img"), "https://semper.ca/", target: "_blank", rel: "noopener" %>
-        <figcaption class="wp-caption-text">Semper</figcaption>
-      </figure>
-    </div>
+      <!-- Card 2: Semper (Middle Card - From Top to Bottom) -->
+      <div class="gallery-card middle-card taller-card" data-aos="fade-right" data-aos-delay="300">
+        <figure class="wp-caption">
+          <%= link_to image_tag("semper.png", alt: "Semper", class: "gallery-img"), "https://semper.ca/", target: "_blank", rel: "noopener" %>
+          <figcaption class="wp-caption-text">Semper</figcaption>
+        </figure>
+      </div>
 
-    <!-- Card 3: Mangalatina -->
-    <div class="gallery-card">
-      <figure class="wp-caption">
-        <%= link_to image_tag("mangalatina.png", alt: "Mangalatina", class: "gallery-img"), "https://www.mangalatina.com/", target: "_blank", rel: "noopener" %>
-        <figcaption class="wp-caption-text">Mangalatina</figcaption>
-      </figure>
-    </div>
-  </div>
+      <!-- Card 3: Mangalatina -->
+      <div class="gallery-card" data-aos="fade-right" data-aos-delay="400">
+        <figure class="wp-caption">
+          <%= link_to image_tag("mangalatina.png", alt: "Mangalatina", class: "gallery-img"), "https://www.mangalatina.com/", target: "_blank", rel: "noopener" %>
+          <figcaption class="wp-caption-text">Mangalatina</figcaption>
+        </figure>
+      </div>
+</div>
+
 </section>
 
+<!-- Footer -->
 <footer class="footer-dark">
   <!-- Facebook Button Positioned Above Footer Content -->
   <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
