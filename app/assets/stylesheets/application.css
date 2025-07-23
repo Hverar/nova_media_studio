@@ -1,10 +1,8 @@
-/* app/assets/stylesheets/application.css */
-
-/* === HERO BANNER STYLING === */
-
+/* === GLOBAL STYLES === */
 html, body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
 
 html {
@@ -104,7 +102,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 2.5rem; /* 👈 bigger gap between paragraph and button */
 }
 
-
 .hero-text p {
   font-size: 1.5rem;
   margin-top: 0.5rem;
@@ -168,36 +165,59 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+/* === MOBILE-RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  .hero-banner {
+    height: 50vh; /* Adjust the hero banner height */
+  }
 
-.footer-dark {
-  background-color: #111;
-  padding: 3rem 1.5rem;
-  color: #fff;
-  text-align: center;
-}
+  .hero-text h1 {
+    font-size: 2.5rem; /* Smaller font size for mobile */
+  }
 
-.footer-content p {
-  font-size: 1rem;
-  margin-bottom: 1.5rem;
-  color: #bbb;
-}
+  .hero-text p {
+    font-size: 1.2rem; /* Smaller font size for mobile */
+  }
 
-.facebook-button {
-  display: inline-block;
-  background-color: #1877f2; /* Facebook blue */
-  color: white;
-  padding: 0.75rem 2rem;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
+  .cta-button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 12px 24px; /* Adjust button padding */
+  }
 
-.facebook-button:hover {
-  background-color: #0f66e8;
-  box-shadow: 0 0 12px rgba(24, 119, 242, 0.7);
-}
+  .hero-nav {
+    flex-direction: column;
+    align-items: center; /* Stack navigation items on mobile */
+    padding: 1rem; /* Adjust padding */
+  }
+
+  .scroll-button {
+    padding: 1rem 2.5rem; /* Adjust button padding */
+    font-size: 1.2rem; /* Adjust font size */
+  }
+
+  /* Adjust sections for smaller screens */
+  .section {
+    padding: 3rem 1rem; /* Adjust section padding */
+  }
+
+  .section h2 {
+    font-size: 1.5rem; /* Smaller heading font size */
+  }
+
+  .centered-block p {
+    font-size: 1.2rem; /* Adjust paragraph font size for mobile */
+  }
+
+  /*.footer-dark {
+    padding: 2rem 1rem; /* Adjust footer padding */
+  }
+
+  .facebook-button {
+    width: 100%; /* Make button take full width on mobile */
+    padding: 1rem 0; /* Adjust button padding */
+    text-align: center; /* Center button text */
+  }
+
 
 
 /* === ACTIVE NAV LINK STYLES === */
@@ -254,9 +274,6 @@ h1, h2, h3, h4, h5, h6 {
   padding-left: 15vw;
   line-height: 1.6;
 }
-
-
-
 
 .creation-steps {
   display: flex;
@@ -348,7 +365,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #333;
 }
 
-
 /* Modal Overlay Background */
 .modal-overlay {
   position: fixed;
@@ -403,6 +419,72 @@ h1, h2, h3, h4, h5, h6 {
   color: #111;
 }
 
+/* === MOBILE-RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+  /* NAV LINKS */
+  .nav-link {
+    font-size: 1rem; /* Adjust font size for mobile */
+    padding-bottom: 0.5rem; /* Adjust padding for better spacing */
+  }
+
+  /* Highlight Text */
+  .highlight-text {
+    font-size: 1.2rem; /* Adjust font size for readability */
+    padding-right: 10vw; /* Adjust padding for mobile */
+    padding-left: 10vw;  /* Adjust padding for mobile */
+  }
+
+  /* Creation Steps */
+  .creation-steps {
+    padding: 40px 20px; /* Reduce padding */
+  }
+
+  .step-card {
+    padding: 20px; /* Adjust padding */
+    flex-direction: column; /* Stack content vertically on mobile */
+  }
+
+  .step-text {
+    padding: 15px; /* Adjust padding */
+    flex: 1 1 100%; /* Ensure it takes full width */
+  }
+
+  .step-image img {
+    height: 200px; /* Adjust image height */
+  }
+
+  /* Call to Action Box */
+  .cta-box {
+    margin: 40px auto;
+    padding: 30px 20px;
+    max-width: 90%;
+  }
+
+  /* Modal Content */
+  .modal-content {
+    width: 90%; /* Make modal take full width on mobile */
+    padding: 2rem; /* Adjust padding */
+  }
+
+  /* Modal Close Button */
+  .modal-close {
+    font-size: 1.2rem; /* Make close button larger */
+  }
+
+  /* CTA Button */
+  .cta-button {
+    padding: 14px 28px; /* Adjust button padding */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  /* Scroll Button */
+  .scroll-button {
+    padding: 1rem 2.5rem; /* Adjust padding */
+    font-size: 1.2rem; /* Adjust font size */
+  }
+}
+
+/* === FORM STYLES === */
 .modal-content form input,
 .modal-content form textarea {
   width: 100%;
@@ -437,7 +519,7 @@ h1, h2, h3, h4, h5, h6 {
   display: none;
 }
 
-
+/* === CONTACT SECTION === */
 .contact-section {
   padding: 60px 20px;
   background: #fff;
@@ -540,7 +622,9 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 20px;
 }
 
+/* === MOBILE-RESPONSIVE STYLES === */
 @media (max-width: 768px) {
+  /* Contact Section */
   .contact-form-wrapper {
     flex-direction: column;
     gap: 40px;
@@ -557,68 +641,62 @@ h1, h2, h3, h4, h5, h6 {
   .contact-form form {
     gap: 16px;
   }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .contact-form button {
+    padding: 10px 20px; /* Adjust button size */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  /* Modal Content */
+  .modal-content {
+    width: 90%; /* Make modal take full width on mobile */
+    padding: 2rem; /* Adjust padding */
+  }
+
+  /* Submit Button */
+  .btn-submit {
+    width: 100%; /* Full-width button on mobile */
+    padding: 12px; /* Adjust padding */
+  }
+
+  /* Info Box */
+  .info-box {
+    padding: 20px;
+  }
+
+  /* Webprocess Section */
+  .webprocess-wrapper {
+    padding: 3rem 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .webprocess-card {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .webprocess-steps {
+    font-size: 1rem; /* Adjust font size for mobile */
+  }
+
+  .webprocess-image-container {
+    width: 100%; /* Make images fit the container on mobile */
+  }
+
+  .webprocess-label {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
 }
 
-.contact-subtitle {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-}
-
-.webprocess-wrapper {
-  display: flex;
-  justify-content: center;
-  padding: 4rem 2rem;
-}
-
-.webprocess-card {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  align-items: flex-start;
-  max-width: 1200px;
-  flex-wrap: wrap;
-}
-
-.webprocess-image-container {
-  flex: 1;
-  position: relative;
-}
-
-.webprocess-image {
-  width: 100%;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-}
-
-.webprocess-label {
-  position: absolute;
-  bottom: 16px;
-  left: 16px;
-  background-color: #6caa2b;
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  font-weight: bold;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.webprocess-steps {
-  flex: 1;
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.webprocess-title {
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.webprocess-list {
-  list-style: none;
-  padding-left: 0;
-}
-
+/* === WEB SERVICE BOX === */
 .web-service-box {
   display: flex;
   justify-content: center;
@@ -640,7 +718,6 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-  overflow: visible;
 }
 
 .web-service-image img {
@@ -668,6 +745,13 @@ h1, h2, h3, h4, h5, h6 {
   min-width: 300px;
 }
 
+.step-grid {
+  display: grid; /* Changed from flex to grid */
+  grid-template-columns: repeat(2, 1fr); /* 2 items per row */
+  gap: 24px; /* Space between items */
+}
+
+
 .web-service-steps h3 {
   font-weight: 800;
   font-size: 2rem; /* was 1.5rem */
@@ -689,149 +773,105 @@ h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
 }
 
-
+/* === MOBILE-RESPONSIVE STYLES === */
 @media (max-width: 768px) {
+  /* WEB SERVICE BOX */
   .web-service-box {
     flex-direction: column;
     padding: 20px;
   }
+
+  .web-service-image {
+    max-width: 100%; /* Ensure the image container fits the screen */
+  }
+
+  .web-service-tag {
+    bottom: -20px; /* Adjust position of the tag */
+    left: 0; /* Center align tag */
+    font-size: 0.85rem; /* Adjust font size */
+  }
+
+  .web-service-steps h3 {
+    font-size: 1.5rem; /* Adjust font size */
+  }
+
+  .step-grid {
+    display: grid;
+    grid-template-columns: 1fr; /* Stack columns on smaller screens */
+    gap: 20px;
+  }
+
+  .step-card {
+    flex-direction: column; /* Stack the step card contents vertically */
+    gap: 12px; /* Adjust gap */
+  }
+
+  .step-icon {
+    font-size: 1rem; /* Adjust icon size */
+  }
+
+  .step-card strong {
+    font-size: 1.1rem; /* Adjust font size */
+  }
+
+  /* CONTACT FORM */
+  .contact-form-wrapper {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .contact-form, .contact-info {
+    flex: 1 1 100%;
+  }
+
+  .contact-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .contact-form form {
+    gap: 16px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    padding: 10px; /* Adjust padding for smaller screens */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  .contact-form button {
+    padding: 10px 20px; /* Adjust button size */
+    font-size: 1rem; /* Adjust font size */
+  }
+
+  /* About Section */
+  .about-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .about-divider {
+    width: 80px; /* Shorter divider on mobile */
+  }
+
+  .about-intro {
+    font-size: 1rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .quote-btn {
+    font-size: 1rem; /* Adjust font size */
+    padding: 12px 30px; /* Adjust button padding */
+  }
+
+  .quote-box {
+    padding: 20px;
+  }
 }
 
-.step-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px 40px;
-}
-
-.step-card {
-  display: flex;
-  gap: 16px;
-  align-items: flex-start;
-}
-
-.step-icon {
-  font-size: 1rem;
-  background-color: #efefef;
-  color: #1a1a1a;
-  padding: 8px;
-  border-radius: 50%;
-  width: 34px;
-  height: 34px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.step-icon i {
-  font-size: 1.2rem;
-}
-
-.step-card strong {
-  font-size: 1.1rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: #111;
-}
-
-.step-card p {
-  font-size: 0.98rem;
-  line-height: 1.6;
-  color: #333;
-}
-
-.step-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 14px;
-}
-.step-item strong {
-  font-size: 1.05rem;
-  font-weight: 700;
-  margin-bottom: 4px;
-  color: #111;
-  display: block;
-}
-
-.step-item p {
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin: 0;
-  color: #333;
-}
-
-.about-heading {
-  font-size: 2.75rem;
-  font-weight: 800;
-  color: #1a1a1a;
-  text-align: center;
-  margin-bottom: 12px;
-}
-
-.about-divider {
-  width: 120px; /* Longer line */
-  height: 3px;
-  background-color: #1a1a1a;
-  margin: 0 auto 24px auto;
-  border-radius: 2px;
-}
-
-.about-intro {
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 8px;
-}
-
-.about-description {
-  font-size: 1.1rem;
-  font-weight: 500;
-  max-width: 850px;
-  margin: 0 auto;
-  text-align: center;
-  line-height: 1.8;
-}
-
-.quote-btn {
-  display: inline-block;
-  padding: 16px 36px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  background-color: #1c1f14;
-  color: white;
-  border-radius: 999px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-  border: none;
-  cursor: pointer;
-}
-
-.quote-btn:hover {
-  background-color: #333 !important;
-}
-
-.about-card {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.about-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-}
-
-.quote-box {
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.quote-box:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-}
-
-/* app/assets/stylesheets/application.css */
-/* === CLEANED THREE-CARD GALLERY CSS === */
-
-/* Use this new container class in your HTML: <div class="three-card-row"> */
+/* === THREE-CARD GALLERY === */
 .three-card-row {
   display: flex;
   justify-content: space-between;
@@ -840,7 +880,6 @@ h1, h2, h3, h4, h5, h6 {
   flex-wrap: wrap;
 }
 
-/* INDIVIDUAL CARD STYLES */
 .gallery-card {
   flex: 1;
   min-width: 350px;
@@ -851,7 +890,6 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
 }
 
-/* IMAGE STYLES */
 .gallery-img {
   width: 100%;
   height: 450px;
@@ -861,7 +899,6 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
 }
 
-/* CAPTION STYLING */
 .wp-caption {
   display: flex;
   flex-direction: column;
@@ -876,13 +913,11 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
 }
 
-/* LEFT CARD */
 .left-card .top-caption {
   font-style: italic;
   margin-bottom: 0.5rem;
 }
 
-/* MIDDLE CARD (lifted illusion) */
 .middle-card {
   margin-top: -2.5rem;
 }
@@ -895,12 +930,26 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.5;
 }
 
-/* RIGHT CARD (delayed illusion) */
 .right-card {
   padding-top: 60px;
 }
 
-/* MOBILE RESPONSIVENESS */
+/* KEEP THESE */
+.market-gallery {
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.market-gallery__header h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+}
+
+/* Mobile Gallery Adjustments */
 @media (max-width: 768px) {
   .three-card-row {
     flex-direction: column;
@@ -922,48 +971,94 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-/* KEEP THESE */
-.market-gallery {
-  padding: 4rem 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
+
+/* Styling for the Thank You page */
+/* Styling for the Thank You page */
+.thank-you-container {
+  text-align: center;
+  padding: 60px;
+  background-color: #f4f4f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 100px auto;
 }
 
-.market-gallery__header h2 {
-  font-size: 3rem;
-  font-weight: 900;
-  color: #000000;
-  margin-bottom: 2rem;
-  line-height: 1.2;
+.thank-you-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
 }
 
-.hero-overlay {
-  z-index: 10;
+.thank-you-message {
+  font-size: 1.2rem;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  font-family: 'Arial', sans-serif;
 }
 
-.taller-card {
-  padding-top: 1; /* Increase as needed */
+.help-contact p {
+  font-size: 1rem;
+  color: #777;
+  font-family: 'Arial', sans-serif;
 }
 
+.contact-link {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
 
-.footer-dark {
+.contact-link:hover {
+  text-decoration: underline;
+}
+
+/* Go Back Button */
+.go-back-container {
+  margin-top: 30px;
+}
+
+.go-back-button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #0056b3;
+}
+/* General Reset */
+* {
+  box-sizing: border-box; /* Ensures padding is included in element's total width */
+  margin: 0;
+  padding: 0;
+}
+.footer {
   background-color: #000;
   color: white;
-  padding: 40px 40px;
-  font-size: 0.875rem;
-}
-
-.footer-content {
+  padding: 80px 20px;  /* Make the footer taller */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
-  border-top: 1px solid #444;
-  padding-top: 10px;
+  font-family: 'Arial', sans-serif;  /* Ensure all text uses the same font */
+}
+
+.footer-left {
+  display: flex;
+  gap: 15px;
+  justify-content: flex-start;
 }
 
 .footer-left a {
-  margin-right: 20px;
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -973,28 +1068,35 @@ h1, h2, h3, h4, h5, h6 {
   text-decoration: underline;
 }
 
-.footer-center, .footer-right {
-  white-space: nowrap;
-}
-
-.facebook-button {
-  display: inline-block;
-  margin: 0 auto;
-  background-color: #1877f2;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 20px;
-  font-weight: bold;
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
   text-align: center;
-  text-decoration: none;
-  position: relative;
-  top: -20px;
+  position: absolute;  /* This centers the content without flexbox on the footer */
+  left: 50%;
+  transform: translateX(-50%);  /* Adjusts the position to exactly center the content */
 }
 
+.facebook-icon {
+  font-size: 35px;  /* Increase icon size */
+  color: white;
+}
 
-/* Add smooth transition for the gallery cards */
-.gallery-card {
-  opacity: 0; /* Initially hidden */
-  transform: translateY(100px); /* Start below */
-  transition: opacity 0.5s ease, transform 0.5s ease; /* Smooth transition */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  text-align: right;
+  font-weight: bold;
+  color: #ccc;
+}
+
+.footer-right span {
+  display: block;
+}
+
+.footer-center span {
+  font-size: 14px;
 }

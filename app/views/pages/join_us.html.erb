@@ -1,0 +1,81 @@
+<!-- Hero Banner with Navigation -->
+<div class="hero-banner">
+  <%= image_tag "banner.jpg", alt: "Banner" %>
+
+  <div class="hero-overlay">
+    <!-- Navigation -->
+    <div class="hero-nav">
+      <%= link_to "Home", root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
+    </div>
+
+    <!-- Centered Text -->
+    <div class="hero-text">
+      <h1>BOOK CONSULTATION.</h1>
+      <p>HOW CAN WE HELP YOU ACHIEVE YOUR DREAMS.</p>
+    </div>
+  </div>
+</div>
+
+<div class="contact-section">
+  <div class="contact-header">
+    <h2>HOW CAN WE HELP YOU ACHIEVE YOUR DREAMS.</h2>
+    <p class="contact-subtitle">Contact us for a free consultation!</p>
+  </div>
+
+  <div class="contact-form-wrapper container">
+    <!-- LEFT SIDE: FORM -->
+    <div class="contact-form">
+      <%= form_with model: @consultation, url: consultations_path, local: true do |form| %>
+        <%= form.label :first_name, "First name *" %>
+        <%= form.text_field :first_name, required: true %>
+
+        <%= form.label :email, "Email *" %>
+        <%= form.email_field :email, required: true %>
+
+        <%= form.label :phone, "Phone" %>
+        <%= form.telephone_field :phone %>
+
+        <%= form.label :project_description, "Tell us about your project *" %>
+        <%= form.text_area :project_description, required: true %>
+
+        <%= form.submit "Submit", class: "btn-submit" %>
+      <% end %>
+    </div>
+
+    <!-- RIGHT SIDE: CONTACT INFO -->
+    <div class="contact-info">
+      <div class="info-box black">
+        <i class="bi bi-envelope-fill"></i>
+        <p>Adresse e-mail</p>
+        <strong>Hverar@gmail.com</strong>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="footer-left">
+    <a href="<%= root_path %>">Home</a>
+    <a href="<%= services_path %>">Services</a>
+    <a href="<%= portfolio_path %>">Portfolio</a>
+    <a href="<%= join_us_path %>">Consultation</a>
+  </div>
+
+    <div class="center-content">
+      <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-link">
+        <i class="fa-brands fa-facebook facebook-icon"></i>
+      </a>
+      <span>Copyright © 2025 NovaMedia Studio</span>
+    </div>
+
+  <div class="footer-right">
+    <span>Powered by NovaMedia Studio</span>
+  </div>
+</footer>
+
+
+<!-- Modal -->
+<%= render 'shared/consultation_modal' %>

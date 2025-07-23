@@ -5,30 +5,29 @@
   <div class="hero-overlay">
     <!-- Navigation -->
     <div class="hero-nav">
-      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
-      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
-      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+      <%= link_to "Home", root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
     </div>
 
     <!-- Centered Text -->
     <div class="hero-text">
       <h1>OUR SERVICES.</h1>
-      <p>A DEDICATED TEAM TO MAKE YOUR IDEA, REALITY.</p>
+      <p>A DEDICATED TEAM TO MAKE YOUR IDEA A REALITY.</p>
     </div>
   </div>
 </div>
 
 <!-- Website Services Highlight -->
-  <section class="highlight-section">
-    <p class="highlight-text-service" style="font-size: 1.5rem;">
-      Elevate your online presence with our custom website design service. We deliver end-to-end solutions — including design, development, and optimization — crafted to reflect your brand’s identity and engage your audience. Every site is responsive, scalable, and tailored to your goals.
-    </p>
-  </section>
+<section class="highlight-section">
+  <p class="highlight-text-service" style="font-size: 1.5rem;">
+    Elevate your online presence with our custom website design service. We deliver end-to-end solutions — including design, development, and optimization — crafted to reflect your brand’s identity and engage your audience. Every site is responsive, scalable, and tailored to your goals.
+  </p>
+</section>
 
-  <!-- Website Creation Steps -->
+<!-- Website Creation Steps -->
 <div class="creation-steps">
-
   <!-- Step 1 -->
   <div class="step-card" data-aos="fade-right">
     <div class="step-text">
@@ -69,52 +68,25 @@
 </div>
 
 <!-- Modal -->
-<div id="expertModal" class="modal-overlay hidden">
-  <div class="modal-content">
-    <button class="modal-close" id="closeModalBtn">&times;</button>
-    <h3>FREE QUOTE</h3>
-
-    <form>
-      <label>First name *</label>
-      <input type="text" required>
-
-      <label>Email *</label>
-      <input type="email" required>
-
-      <label>Phone</label>
-      <input type="text">
-
-      <label>Tell us about your project *</label>
-      <input type="text">
-
-      <button type="submit" class="btn-submit">Submit</button>
-    </form>
-  </div>
-</div>
-
+<%= render 'shared/consultation_modal' %>
 
 <!-- Footer -->
-<footer class="footer-dark">
-  <!-- Facebook Button Positioned Above Footer Content -->
-  <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
-    Follow us on Facebook
-  </a>
+<footer class="footer">
+  <div class="footer-left">
+    <a href="<%= root_path %>">Home</a>
+    <a href="<%= services_path %>">Services</a>
+    <a href="<%= portfolio_path %>">Portfolio</a>
+    <a href="<%= join_us_path %>">Consultation</a>
+  </div>
 
-  <!-- Main Footer Content -->
-  <div class="footer-content">
-    <div class="footer-left">
-      <%= link_to "Home", url_for(:root) %>
-      <%= link_to "Services", url_for(:services) %>
-      <%= link_to "Portfolio", url_for(:portfolio) %>
-      <%= link_to "Join us", url_for(:join) %>
+    <div class="center-content">
+      <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-link">
+        <i class="fa-brands fa-facebook facebook-icon"></i>
+      </a>
+      <span>Copyright © 2025 NovaMedia Studio</span>
     </div>
 
-    <div class="footer-center">
-      <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
-    </div>
-
-    <div class="footer-right">
-      <p>Powered by NovaMedia Studio</p>
-    </div>
+  <div class="footer-right">
+    <span>Powered by NovaMedia Studio</span>
   </div>
 </footer>

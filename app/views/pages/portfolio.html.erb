@@ -8,7 +8,7 @@
       <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
       <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
       <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-      <%= link_to "Join Us", url_for(:join), class: ("nav-link #{current_page?(join_path) ? 'active' : ''}") %>
+     <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
     </div>
 
     <!-- Centered Text -->
@@ -53,28 +53,22 @@
 
 </section>
 
-<!-- Footer -->
-<footer class="footer-dark">
-  <!-- Facebook Button Positioned Above Footer Content -->
-  <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-button">
-    Follow us on Facebook
-  </a>
+<footer class="footer">
+  <div class="footer-left">
+    <a href="<%= root_path %>">Home</a>
+    <a href="<%= services_path %>">Services</a>
+    <a href="<%= portfolio_path %>">Portfolio</a>
+    <a href="<%= join_us_path %>">Consultation</a>
+  </div>
 
-  <!-- Main Footer Content -->
-  <div class="footer-content">
-    <div class="footer-left">
-      <%= link_to "Home", url_for(:root) %>
-      <%= link_to "Services", url_for(:services) %>
-      <%= link_to "Portfolio", url_for(:portfolio) %>
-      <%= link_to "Join us", url_for(:join) %>
+    <div class="center-content">
+      <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-link">
+        <i class="fa-brands fa-facebook facebook-icon"></i>
+      </a>
+      <span>Copyright © 2025 NovaMedia Studio</span>
     </div>
 
-    <div class="footer-center">
-      <p>&copy; <%= Date.today.year %> NovaMedia Studio</p>
-    </div>
-
-    <div class="footer-right">
-      <p>Powered by NovaMedia Studio</p>
-    </div>
+  <div class="footer-right">
+    <span>Powered by NovaMedia Studio</span>
   </div>
 </footer>
