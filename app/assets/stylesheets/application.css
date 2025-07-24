@@ -246,7 +246,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-link.active::after {
-  background-color: black;
+  background-color: rgb(255, 255, 255);
 }
 
 .highlight-section {
@@ -301,6 +301,12 @@ h1, h2, h3, h4, h5, h6 {
   flex: 1 1 45%;
   max-width: 500px;
   padding: 20px;
+}
+
+.step-icon {
+  font-size: 2rem;
+  color: #5d9f2c;
+  margin-right: 12px;
 }
 
 .step-text h3 {
@@ -419,6 +425,24 @@ h1, h2, h3, h4, h5, h6 {
   color: #111;
 }
 
+.highlight-text-service {
+  font-size: 1.5rem; /* Keep the font size as you specified */
+  max-width: 800px; /* Set a max width to avoid stretching on large screens */
+  margin: 0 auto; /* Center the text */
+  text-align: center; /* Ensure the text is centered */
+  line-height: 1.8; /* Adjust line height for readability */
+  padding: 0 20px; /* Optional: add some padding on small screens to avoid edge-to-edge text */
+}
+.highlight-text-service {
+  font-size: 1.5rem; /* Keep the font size as you specified */
+  max-width: 800px; /* Set a max width to avoid stretching on large screens */
+  margin: 0 auto; /* Center the text */
+  text-align: center; /* Ensure the text is centered */
+  line-height: 1.8; /* Adjust line height for readability */
+  padding: 0 20px; /* Optional: add some padding on small screens to avoid edge-to-edge text */
+}
+
+
 /* === MOBILE-RESPONSIVE STYLES === */
 @media (max-width: 768px) {
   /* NAV LINKS */
@@ -499,8 +523,8 @@ h1, h2, h3, h4, h5, h6 {
 /* Submit Button */
 .btn-submit {
   margin-top: 1.5rem;
-  background-color: #0f0f1b;
-  color: #fff;
+  background-color: #2e2e2e !important;
+  color: #fff !important;
   border: none;
   padding: 12px 24px;
   border-radius: 999px;
@@ -511,7 +535,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-submit:hover {
-  background-color: #333;
+  background-color: #000000 !important;
 }
 
 /* Hide modal initially */
@@ -716,9 +740,11 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   max-width: 300px;
   border-radius: 12px;
-  overflow: hidden;
+  overflow: visible;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  margin-bottom: 30px; /* ✅ Add this line */
 }
+
 
 .web-service-image img {
   width: 100%;
@@ -758,6 +784,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 32px; /* was 24px */
   color: #111;
 }
+
+
 
 .step-grid div {
   font-size: 1.1rem; /* was 0.95rem */
@@ -1099,4 +1127,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer-center span {
   font-size: 14px;
+}
+
+.footer-left,
+.footer-right {
+  padding: 0 40px;  /* Adjust value as needed */
 }
