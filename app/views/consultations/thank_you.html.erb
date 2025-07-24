@@ -1,10 +1,18 @@
 <!-- app/views/consultations/thank_you.html.erb -->
-<div class="thank-you-container">
-  <h1 class="thank-you-title">Thank You!</h1>
-  <p class="thank-you-message">Please check your email for further instructions.</p>
 
-  <!-- Go Back Button -->
-  <div class="go-back-container">
-    <a href="/" class="go-back-button">Go Back to Home</a>
+<div class="thank-you-wrapper">
+  <!-- Background Logo -->
+  <div class="thank-you-logo-overlay">
+    <img src="<%= asset_path('logo.png') %>" alt="NovaMedia Logo" class="background-logo">
+  </div>
+
+  <!-- Content Container -->
+  <div class="thank-you-container">
+    <h1 class="thank-you-title"><%= t("consultation.thank_you.title") %></h1>
+    <p class="thank-you-message"><%= t("consultation.thank_you.message") %></p>
+
+    <div class="go-back-container">
+      <a href="/" class="go-back-button"><%= t("consultation.thank_you.back") %></a>
+    </div>
   </div>
 </div>

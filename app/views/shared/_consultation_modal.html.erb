@@ -1,23 +1,32 @@
 <div id="expertModal" class="modal-overlay hidden">
   <div class="modal-content">
     <button class="modal-close" id="closeModalBtn">&times;</button>
-    <h3>FREE CONSULTATION</h3>
 
-    <%= form_with(model: @consultation, url: consultations_path, local: true) do |form| %>
-      <%= form.label :first_name, "First name *" %>
-      <%= form.text_field :first_name, required: true %>
+    <!-- Title + Logo Row -->
+    <div class="modal-header">
+      <h3 class="modal-title"><%= t("consultation.modal.title") %></h3>
+      <%= image_tag "logo_simple.png", alt: "Logo", class: "modal-logo-img" %>
+    </div>
 
-      <%= form.label :email, "Email *" %>
-      <%= form.email_field :email, required: true %>
+    <!-- Form Block -->
+    <div class="modal-inner">
+      <div class="modal-form">
+        <%= form_with(model: @consultation, url: consultations_path, local: true) do |form| %>
+          <%= form.label :first_name, t("consultation.form.first_name") %>
+          <%= form.text_field :first_name, required: true %>
 
-      <%= form.label :phone, "Phone" %>
-      <%= form.text_field :phone %>
+          <%= form.label :email, t("consultation.form.email") %>
+          <%= form.email_field :email, required: true %>
 
-      <%= form.label :project_description, "Tell us about your project *" %>
-      <%= form.text_area :project_description, required: true %>
+          <%= form.label :phone, t("consultation.form.phone") %>
+          <%= form.text_field :phone %>
 
-      <%= form.submit "Submit", class: "btn-submit" %>
-    <% end %>
+          <%= form.label :project_description, t("consultation.form.description") %>
+          <%= form.text_field :project_description, required: true %>
 
+          <%= form.submit t("consultation.form.submit"), class: "btn-submit" %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>

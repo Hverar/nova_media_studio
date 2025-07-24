@@ -1,0 +1,86 @@
+fr:
+  nav:
+    home: "Accueil"
+    services: "Services"
+    portfolio: "Portfolio"
+    consultation: "Consultation"
+
+  hero:
+    title: "VOTRE MARQUE, VOTRE SITE."
+    subtitle: "Des sites web personnalisés pour votre identité professionnelle."
+    cta: "PARLER À UN EXPERT"
+
+  hero_services:
+    title: "NOS SERVICES."
+    subtitle: "UNE ÉQUIPE DÉDIÉE POUR DONNER VIE À VOTRE IDÉE."
+
+  web_service:
+    tagline: "Conçu pour votre marque, de A à Z"
+
+  steps:
+    title: "ÉTAPES"
+    one:
+      title: "Lancement Créatif"
+      desc: "Nous commençons par comprendre vos objectifs, votre vision et l'identité de votre marque à travers une session collaborative."
+    two:
+      title: "Maquettes UX et Design"
+      desc: "Nos designers créent des interfaces intuitives et des visuels adaptés à votre public."
+    three:
+      title: "Développement Responsive"
+      desc: "Nous construisons votre site avec des frameworks modernes adaptés à tous les écrans."
+    four:
+      title: "Optimisation & Lancement"
+      desc: "Une fois testé et peaufiné, nous lançons votre site avec les meilleures pratiques SEO et un support continu."
+
+  services:
+    highlight: "Renforcez votre présence en ligne grâce à notre service de conception de sites web sur mesure. Nous nous occupons de tout : design, développement, optimisation. Chaque site est pensé pour refléter votre marque, toucher votre public, et fonctionner parfaitement sur tous les appareils."
+    steps:
+      step1:
+        title: "ÉTAPE 1 : BRAINSTORMING ET DESIGN"
+        desc: "Nous lançons chaque projet par une session de découverte et de planification pour comprendre votre marque. Ensuite, nous créons une mise en page unique adaptée à vos objectifs et à votre style."
+      step2:
+        title: "ÉTAPE 2 : DÉVELOPPEMENT"
+        desc: "Notre équipe code votre site en utilisant les outils les plus récents et des frameworks responsives. Chaque fonctionnalité est soigneusement intégrée pour garantir performance et ergonomie."
+      step3:
+        title: "ÉTAPE 3 : HÉBERGEMENT ET LANCEMENT"
+        desc: "Une fois approuvé, nous déployons et hébergeons votre site. Il est mis en ligne rapidement et en toute sécurité, prêt à accueillir vos visiteurs à tout moment."
+    cta:
+      title: "BESOIN D'UN SITE WEB ? VOUS AVEZ UNE IDÉE À RÉALISER ?"
+      button: "Parlez à un expert"
+
+  about:
+    title: "À PROPOS"
+    tagline: "Chez NovaMedia Studio,"
+    description: "Nous sommes spécialisés dans la conception et le développement de sites web sur mesure. Notre équipe s'engage à fournir un travail de qualité en combinant créativité, compétences techniques et souci du détail pour satisfaire pleinement nos clients."
+
+  portfolio:
+    hero:
+      title: "NOTRE TRAVAIL."
+      subtitle: "CRÉATION DE SITES WEB."
+    gallery:
+      heading_html: "Découvrez Nos<br>Projets"
+    projects:
+      shareameal: "Share-a-meal"
+      semper: "Semper"
+      mangalatina: "Mangalatina"
+
+  consultation:
+    hero:
+      title: "PRENEZ RENDEZ-VOUS."
+      subtitle: "COMMENT POUVONS-NOUS VOUS AIDER À RÉALISER VOS RÊVES."
+    form:
+      heading: "COMMENT POUVONS-NOUS VOUS AIDER À RÉALISER VOS RÊVES."
+      subtitle: "Contactez-nous pour une consultation gratuite !"
+      first_name: "Prénom *"
+      email: "Courriel *"
+      phone: "Téléphone"
+      description: "Parlez-nous de votre projet *"
+      submit: "Envoyer"
+    contact:
+      email_label: "Adresse e-mail"
+    modal:
+      title: "CONSULTATION GRATUITE"
+    thank_you:
+      title: "Merci !"
+      message: "Veuillez vérifier votre courriel pour plus d'instructions."
+      back: "Retour à l'accueil"

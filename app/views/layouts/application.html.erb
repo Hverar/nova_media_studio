@@ -2,29 +2,92 @@
 <html>
   <head>
     <title>NovaMediaStudio</title>
-
-    <!-- AOS Animate On Scroll CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+    <%= favicon_link_tag "logo_simple.png", rel: "icon", type: "image/png" %>
 
+
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <!-- AOS Animate On Scroll -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+    <!-- Main CSS -->
     <%= stylesheet_link_tag "application", media: "all", "data-turbo-track": "reload" %>
   </head>
 
   <body>
     <%= yield %>
 
-    <!-- AOS Animate On Scroll JS -->
+    <!-- AOS JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
+    <script>AOS.init();</script>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
+
+    <!-- Language Selector -->
+    <div class="lang-selector" id="langSelector">
+      <button id="langToggleBtn" class="lang-toggle-btn">
+        <%= image_tag(I18n.locale == :fr ? "canada.png" : "united-states.png", width: 24) %>
+        <%= I18n.locale == :fr ? "FR" : "EN" %>
+        <i class="fa fa-chevron-down"></i>
+      </button>
+
+      <div id="langDropdown" class="lang-dropdown hidden">
+        <% if I18n.locale == :fr %>
+          <%= link_to url_for(locale: :en), class: "lang-option" do %>
+            <%= image_tag("united-states.png", width: 24) %>
+            English
+          <% end %>
+        <% else %>
+          <%= link_to url_for(locale: :fr), class: "lang-option" do %>
+            <%= image_tag("canada.png", width: 24) %>
+            Français
+          <% end %>
+        <% end %>
+      </div>
+
+      <!-- Attribution -->
+        <a href="https://www.flaticon.com/free-icons/canada" target="_blank" title="canada icons"></a>
+        <a href="https://www.flaticon.com/free-icons/flag" target="_blank" title="flag icons"></a>
+    </div>
+
+    <!-- Language Dropdown Script -->
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const toggleBtn = document.getElementById("langToggleBtn");
+        const dropdown = document.getElementById("langDropdown");
+        const selector = document.getElementById("langSelector");
+
+        toggleBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          dropdown.classList.toggle("hidden");
+          selector.classList.toggle("shift-up");
+
+          // Optional: detect space and switch dropdown direction if needed
+          if (!dropdown.classList.contains("hidden")) {
+            const rect = toggleBtn.getBoundingClientRect();
+            const dropdownHeight = dropdown.offsetHeight;
+            const spaceBelow = window.innerHeight - rect.bottom;
+
+            if (spaceBelow < dropdownHeight + 20) {
+              dropdown.classList.add("open-up");
+            } else {
+              dropdown.classList.remove("open-up");
+            }
+          }
+        });
+
+        document.addEventListener("click", (e) => {
+          if (!toggleBtn.contains(e.target) && !dropdown.contains(e.target)) {
+            dropdown.classList.add("hidden");
+            selector.classList.remove("shift-up");
+          }
+        });
+      });
+    </script>
   </body>
 </html>

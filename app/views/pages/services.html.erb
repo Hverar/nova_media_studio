@@ -3,18 +3,22 @@
   <%= image_tag "banner.jpg", alt: "Banner" %>
 
   <div class="hero-overlay">
+
+    <div class="hero-logo">
+      <%= image_tag "logo_white.png", alt: "Logo", class: "site-logo" %>
+    </div>
     <!-- Navigation -->
     <div class="hero-nav">
-      <%= link_to "Home", root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
-      <%= link_to "Services", services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
-      <%= link_to "Portfolio", portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-      <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.home"), root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.services"), services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.portfolio"), portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.consultation"), join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
     </div>
 
     <!-- Centered Text -->
     <div class="hero-text">
-      <h1>OUR SERVICES.</h1>
-      <p>A DEDICATED TEAM TO MAKE YOUR IDEA A REALITY.</p>
+      <h1><%= t("hero_services.title") %></h1>
+      <p><%= t("hero_services.subtitle") %></p>
     </div>
   </div>
 </div>
@@ -22,7 +26,7 @@
 <!-- Website Services Highlight -->
 <section class="highlight-section">
   <p class="highlight-text-service" style="font-size: 1.5rem;">
-    Boost your online presence with our custom website design service. We handle everything from design and development to optimization. Each site is built to match your brand, connect with your audience, and work smoothly on any device.
+    <%= t("services.highlight") %>
   </p>
 </section>
 
@@ -31,8 +35,8 @@
   <!-- Step 1 -->
   <div class="step-card" data-aos="fade-right">
     <div class="step-text">
-      <h3>STEP 1: BRAINSTORM & DESIGN</h3>
-      <p>We kick off every project with discovery and planning sessions to understand your brand. Then we design a unique layout tailored to your goals and style.</p>
+      <h3><%= t("services.steps.step1.title") %></h3>
+      <p><%= t("services.steps.step1.desc") %></p>
     </div>
     <div class="step-image">
       <%= image_tag "design.jpg", alt: "Design phase" %>
@@ -42,8 +46,8 @@
   <!-- Step 2 -->
   <div class="step-card" data-aos="fade-left">
     <div class="step-text">
-      <h3>STEP 2: DEVELOPMENT</h3>
-      <p>Our team codes your website using the latest tools and responsive frameworks. Every feature is carefully implemented to ensure performance and usability.</p>
+      <h3><%= t("services.steps.step2.title") %></h3>
+      <p><%= t("services.steps.step2.desc") %></p>
     </div>
     <div class="step-image">
       <%= image_tag "development.jpg", alt: "Development phase" %>
@@ -53,8 +57,8 @@
   <!-- Step 3 -->
   <div class="step-card" data-aos="fade-right">
     <div class="step-text">
-      <h3>STEP 3: HOSTING & LAUNCH</h3>
-      <p>Once approved, we take care of deployment and hosting. Your website goes live, fast and secure, ready to serve your visitors around the clock.</p>
+      <h3><%= t("services.steps.step3.title") %></h3>
+      <p><%= t("services.steps.step3.desc") %></p>
     </div>
     <div class="step-image">
       <%= image_tag "hosting.jpg", alt: "Hosting phase" %>
@@ -63,8 +67,8 @@
 </div>
 
 <div class="cta-box">
-  <h2>NEED A WEBSITE? WANT TO REALIZE YOUR IDEA?</h2>
-  <a href="#" id="openModalBtn" class="cta-button">Talk To An Expert</a>
+  <h2><%= t("services.cta.title") %></h2>
+  <a href="#" id="openModalBtn" class="cta-button"><%= t("services.cta.button") %></a>
 </div>
 
 <!-- Modal -->
@@ -73,18 +77,26 @@
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-left">
-    <a href="<%= root_path %>">Home</a>
-    <a href="<%= services_path %>">Services</a>
-    <a href="<%= portfolio_path %>">Portfolio</a>
-    <a href="<%= join_us_path %>">Consultation</a>
+    <a href="<%= root_path %>"><%= t("nav.home") %></a>
+    <a href="<%= services_path %>"><%= t("nav.services") %></a>
+    <a href="<%= portfolio_path %>"><%= t("nav.portfolio") %></a>
+    <a href="<%= join_us_path %>"><%= t("nav.consultation") %></a>
   </div>
 
-    <div class="center-content">
+  <div class="center-content">
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/henrique-vera-ramirez-065845296/" target="_blank" class="linkedin-link">
+        <i class="fa-brands fa-linkedin facebook-icon"></i>
+      </a>
       <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-link">
         <i class="fa-brands fa-facebook facebook-icon"></i>
       </a>
-      <span>Copyright © 2025 NovaMedia Studio</span>
+      <a href="https://github.com/Hverar" target="_blank" class="github-link">
+        <i class="fa-brands fa-github facebook-icon"></i>
+      </a>
     </div>
+    <span>Copyright © 2025 NovaMedia Studio</span>
+  </div>
 
   <div class="footer-right">
     <span>Powered by NovaMedia Studio</span>

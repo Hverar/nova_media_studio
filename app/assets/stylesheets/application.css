@@ -5,6 +5,23 @@ html, body {
   overflow-x: hidden;
 }
 
+.hero-logo {
+  position: absolute !important;
+  top: -95px !important;
+  left: -50px !important;
+  z-index: 999 !important;
+  width: auto !important;
+}
+
+.site-logo {
+  display: block !important;
+  width: 600px !important;
+  height: auto !important;
+  object-fit: contain !important;
+}
+
+
+
 html {
   scroll-behavior: smooth;
 }
@@ -228,6 +245,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-bottom: 0.25rem;
   font-weight: bold;
   transition: color 0.3s ease;
+  font-size:18px;
 }
 
 .nav-link::after {
@@ -280,7 +298,10 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   gap: 60px;
   padding: 60px 20px;
+  max-width: 1800px; /* or whatever size you decided */
+  margin: 0 auto;    /* this is the key for centering */
 }
+
 
 .step-card {
   display: flex;
@@ -1001,70 +1022,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
-/* Styling for the Thank You page */
-/* Styling for the Thank You page */
-.thank-you-container {
-  text-align: center;
-  padding: 60px;
-  background-color: #f4f4f9;
-  border-radius: 10px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 600px;
-  margin: 100px auto;
-}
-
-.thank-you-title {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-  margin-bottom: 20px;
-  font-family: 'Arial', sans-serif;
-}
-
-.thank-you-message {
-  font-size: 1.2rem;
-  color: #555;
-  line-height: 1.5;
-  margin-bottom: 30px;
-  font-family: 'Arial', sans-serif;
-}
-
-.help-contact p {
-  font-size: 1rem;
-  color: #777;
-  font-family: 'Arial', sans-serif;
-}
-
-.contact-link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-/* Go Back Button */
-.go-back-container {
-  margin-top: 30px;
-}
-
-.go-back-button {
-  padding: 12px 24px;
-  background-color: #007bff;
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
-  font-weight: bold;
-  border-radius: 8px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
-}
-
-.go-back-button:hover {
-  background-color: #0056b3;
-}
 /* General Reset */
 * {
   box-sizing: border-box; /* Ensures padding is included in element's total width */
@@ -1154,4 +1111,207 @@ h1, h2, h3, h4, h5, h6 {
 .footer-left,
 .footer-right {
   padding: 0 40px;  /* Adjust value as needed */
+}
+/* Language Selector Container */
+.lang-selector {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: transform 0.3s ease;
+}
+
+/* Moves whole block up when dropdown opens */
+.lang-selector.shift-up {
+  transform: translateY(-60px);
+}
+
+/* Fixed width for consistency */
+.lang-toggle-btn,
+.lang-dropdown {
+  width: 160px;
+}
+
+/* Toggle Button */
+.lang-toggle-btn {
+  background-color: #111;
+  color: white;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* Dropdown Styles */
+.lang-dropdown {
+  position: absolute;
+  top: 100%; /* open BELOW */
+  left: 0;
+  margin-top: 6px; /* spacing below the button */
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+  transition: transform 0.2s ease;
+  z-index: 1001;
+}
+
+/* Dropdown Hidden */
+.hidden {
+  display: none;
+}
+
+/* Language Options */
+.lang-option {
+  width: 100%;
+  padding: 10px 14px;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #f4f4f4;
+  transition: background-color 0.2s;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.lang-option:last-child {
+  border-bottom: none;
+}
+
+.lang-option:hover {
+  background-color: #e0e0e0;
+}
+
+/* Attribution Section */
+.lang-attribution {
+  font-size: 10px;
+  color: #888;
+  padding: 8px 12px;
+  line-height: 1.3;
+  background-color: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.lang-attribution a {
+  color: #888;
+  text-decoration: none;
+}
+
+.lang-attribution a:hover {
+  text-decoration: underline;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.modal-title {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.modal-logo-img {
+  height: 5em; /* Increased from 1.5em */
+  width: auto;
+  object-fit: contain;
+}
+
+
+.modal-inner {
+  display: flex;
+  flex-direction: column; /* Prevent side-by-side logo distortion */
+}
+
+.modal-form {
+  width: 100%;
+}
+
+
+.thank-you-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f9f9f9;
+  overflow: hidden;
+}
+
+/* Giant, centered, super faded logo */
+.thank-you-logo-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.03; /* Very subtle; adjust as needed */
+  z-index: 0;
+  pointer-events: none; /* So users can't click it */
+}
+
+.background-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 2000px;
+  height: auto;
+  max-width: none;
+  display: block;
+  pointer-events: none; /* Optional, keeps it non-interactive */
+}
+
+/* The content box */
+.thank-you-container {
+  position: relative;
+  z-index: 1;
+  background: transparent;        /* Remove white card */
+  box-shadow: none;               /* Remove shadow */
+  padding: 40px 30px;
+  border-radius: 0;               /* Remove rounded corners */
+  text-align: center;
+}
+
+
+/* Title */
+.thank-you-title {
+  font-size: 2.5rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* Message */
+.thank-you-message {
+  font-size: 1.125rem;
+  margin-bottom: 32px;
+  color: #333;
+}
+
+/* Button */
+.go-back-button {
+  background-color: #515151;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.go-back-button:hover {
+  background-color: #000000;
 }

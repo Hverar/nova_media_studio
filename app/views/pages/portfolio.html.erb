@@ -3,18 +3,22 @@
   <%= image_tag "banner.jpg", alt: "Banner" %>
 
   <div class="hero-overlay">
+
+    <div class="hero-logo">
+      <%= image_tag "logo_white.png", alt: "Logo", class: "site-logo" %>
+    </div>
     <!-- Navigation -->
     <div class="hero-nav">
-      <%= link_to "Home", url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
-      <%= link_to "Services", url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
-      <%= link_to "Portfolio", url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-     <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.home"), url_for(:root), class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.services"), url_for(:services), class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.portfolio"), url_for(:portfolio), class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to t("nav.consultation"), join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
     </div>
 
     <!-- Centered Text -->
     <div class="hero-text" data-aos="fade-left">
-      <h1>OUR WORK.</h1>
-      <p>WEBSITE CREATION.</p>
+      <h1><%= t("portfolio.hero.title") %></h1>
+      <p><%= t("portfolio.hero.subtitle") %></p>
     </div>
   </div>
 </div>
@@ -22,51 +26,59 @@
 <!-- MARKET GALLERY -->
 <section class="market-gallery">
   <div class="market-gallery__header" data-aos="fade-right">
-    <h2>Discover Our<br>Projects</h2>
+    <h2><%= t("portfolio.gallery.heading_html") %></h2>
   </div>
 
-    <div class="three-card-row">
-      <!-- Card 1: Share-a-meal -->
-      <div class="gallery-card" data-aos="fade-right" data-aos-delay="200">
-        <figure class="wp-caption">
-          <%= link_to image_tag("shareameal_logo.png", alt: "Share-a-meal", class: "gallery-img"), "https://www.shareameal.me/", target: "_blank", rel: "noopener" %>
-          <figcaption class="wp-caption-text">Share-a-meal</figcaption>
-        </figure>
-      </div>
+  <div class="three-card-row">
+    <!-- Card 1: Share-a-meal -->
+    <div class="gallery-card" data-aos="fade-right" data-aos-delay="200">
+      <figure class="wp-caption">
+        <%= link_to image_tag("shareameal_logo.png", alt: "Share-a-meal", class: "gallery-img"), "https://www.shareameal.me/", target: "_blank", rel: "noopener" %>
+        <figcaption class="wp-caption-text"><%= t("portfolio.projects.shareameal") %></figcaption>
+      </figure>
+    </div>
 
-      <!-- Card 2: Semper (Middle Card - From Top to Bottom) -->
-      <div class="gallery-card middle-card taller-card" data-aos="fade-right" data-aos-delay="300">
-        <figure class="wp-caption">
-          <%= link_to image_tag("semper.png", alt: "Semper", class: "gallery-img"), "https://semper.ca/", target: "_blank", rel: "noopener" %>
-          <figcaption class="wp-caption-text">Semper</figcaption>
-        </figure>
-      </div>
+    <!-- Card 2: Semper -->
+    <div class="gallery-card middle-card taller-card" data-aos="fade-right" data-aos-delay="300">
+      <figure class="wp-caption">
+        <%= link_to image_tag("semper.png", alt: "Semper", class: "gallery-img"), "https://semper.ca/", target: "_blank", rel: "noopener" %>
+        <figcaption class="wp-caption-text"><%= t("portfolio.projects.semper") %></figcaption>
+      </figure>
+    </div>
 
-      <!-- Card 3: Mangalatina -->
-      <div class="gallery-card" data-aos="fade-right" data-aos-delay="400">
-        <figure class="wp-caption">
-          <%= link_to image_tag("mangalatina.png", alt: "Mangalatina", class: "gallery-img"), "https://www.mangalatina.com/", target: "_blank", rel: "noopener" %>
-          <figcaption class="wp-caption-text">Mangalatina</figcaption>
-        </figure>
-      </div>
-</div>
-
+    <!-- Card 3: Mangalatina -->
+    <div class="gallery-card" data-aos="fade-right" data-aos-delay="400">
+      <figure class="wp-caption">
+        <%= link_to image_tag("mangalatina.png", alt: "Mangalatina", class: "gallery-img"), "https://www.mangalatina.com/", target: "_blank", rel: "noopener" %>
+        <figcaption class="wp-caption-text"><%= t("portfolio.projects.mangalatina") %></figcaption>
+      </figure>
+    </div>
+  </div>
 </section>
 
+<!-- Footer -->
 <footer class="footer">
   <div class="footer-left">
-    <a href="<%= root_path %>">Home</a>
-    <a href="<%= services_path %>">Services</a>
-    <a href="<%= portfolio_path %>">Portfolio</a>
-    <a href="<%= join_us_path %>">Consultation</a>
+    <a href="<%= root_path %>"><%= t("nav.home") %></a>
+    <a href="<%= services_path %>"><%= t("nav.services") %></a>
+    <a href="<%= portfolio_path %>"><%= t("nav.portfolio") %></a>
+    <a href="<%= join_us_path %>"><%= t("nav.consultation") %></a>
   </div>
 
-    <div class="center-content">
+  <div class="center-content">
+    <div class="social-icons">
+      <a href="https://www.linkedin.com/in/henrique-vera-ramirez-065845296/" target="_blank" class="linkedin-link">
+        <i class="fa-brands fa-linkedin facebook-icon"></i>
+      </a>
       <a href="https://www.facebook.com/profile.php?id=61578411996415" target="_blank" class="facebook-link">
         <i class="fa-brands fa-facebook facebook-icon"></i>
       </a>
-      <span>Copyright © 2025 NovaMedia Studio</span>
+      <a href="https://github.com/Hverar" target="_blank" class="github-link">
+        <i class="fa-brands fa-github facebook-icon"></i>
+      </a>
     </div>
+    <span>Copyright © 2025 NovaMedia Studio</span>
+  </div>
 
   <div class="footer-right">
     <span>Powered by NovaMedia Studio</span>

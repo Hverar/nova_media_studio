@@ -1,31 +1,86 @@
-# Files in the config/locales directory are used for internationalization and
-# are automatically loaded by Rails. If you want to use locales other than
-# English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t "hello"
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t("hello") %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more about the API, please read the Rails Internationalization guide
-# at https://guides.rubyonrails.org/i18n.html.
-#
-# Be aware that YAML interprets the following case-insensitive strings as
-# booleans: `true`, `false`, `on`, `off`, `yes`, `no`. Therefore, these strings
-# must be quoted to be interpreted as strings. For example:
-#
-#     en:
-#       "yes": yup
-#       enabled: "ON"
-
 en:
-  hello: "Hello world"
+  nav:
+    home: "Home"
+    services: "Services"
+    portfolio: "Portfolio"
+    consultation: "Consultation"
+
+  hero:
+    title: "YOUR BRAND, YOUR WEB."
+    subtitle: "Custom websites built for your business identity."
+    cta: "TALK TO AN EXPERT"
+
+  hero_services:
+    title: "OUR SERVICES."
+    subtitle: "A DEDICATED TEAM TO MAKE YOUR IDEA A REALITY."
+
+  web_service:
+    tagline: "Tailored to your brand, from A to Z"
+
+  steps:
+    title: "STEPS"
+    one:
+      title: "Creative Kickoff"
+      desc: "We begin by understanding your goals, vision, and brand identity through a collaborative session."
+    two:
+      title: "UX & Design Mockups"
+      desc: "Our designers craft intuitive layouts and visuals tailored to your audience."
+    three:
+      title: "Responsive Development"
+      desc: "We build your site using modern frameworks that look great on every screen."
+    four:
+      title: "Optimization & Launch"
+      desc: "Once tested and polished, we deploy your site with SEO best practices and ongoing support options."
+
+  services:
+    highlight: "Boost your online presence with our custom website design service. We handle everything from design and development to optimization. Each site is built to match your brand, connect with your audience, and work smoothly on any device."
+    steps:
+      step1:
+        title: "STEP 1: BRAINSTORM & DESIGN"
+        desc: "We kick off every project with discovery and planning sessions to understand your brand. Then we design a unique layout tailored to your goals and style."
+      step2:
+        title: "STEP 2: DEVELOPMENT"
+        desc: "Our team codes your website using the latest tools and responsive frameworks. Every feature is carefully implemented to ensure performance and usability."
+      step3:
+        title: "STEP 3: HOSTING & LAUNCH"
+        desc: "Once approved, we take care of deployment and hosting. Your website goes live, fast and secure, ready to serve your visitors around the clock."
+    cta:
+      title: "NEED A WEBSITE? WANT TO REALIZE YOUR IDEA?"
+      button: "Talk To An Expert"
+
+  about:
+    title: "ABOUT"
+    tagline: "At NovaMedia Studio,"
+    description: "We specialize in custom web design and development. Our team is committed to delivering quality work, combining creativity, technical skill, and attention to detail to fully satisfy our clients."
+
+  portfolio:
+    hero:
+      title: "OUR WORK."
+      subtitle: "WEBSITE CREATION."
+    gallery:
+      heading_html: "Discover Our<br>Projects"
+    projects:
+      shareameal: "Share-a-meal"
+      semper: "Semper"
+      mangalatina: "Mangalatina"
+
+  consultation:
+    hero:
+      title: "BOOK CONSULTATION."
+      subtitle: "HOW CAN WE HELP YOU ACHIEVE YOUR DREAMS."
+    form:
+      heading: "HOW CAN WE HELP YOU ACHIEVE YOUR DREAMS."
+      subtitle: "Contact us for a free consultation!"
+      first_name: "First name *"
+      email: "Email *"
+      phone: "Phone"
+      description: "Tell us about your project *"
+      submit: "Submit"
+    contact:
+      email_label: "Email Address"
+    modal:
+      title: "FREE CONSULTATION"
+    thank_you:
+      title: "Thank You!"
+      message: "Please check your email for further instructions."
+      back: "Go Back to Home"
