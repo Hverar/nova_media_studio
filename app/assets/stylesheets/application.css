@@ -303,6 +303,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 20px;
 }
 
+
 .step-icon {
   font-size: 2rem;
   color: #5d9f2c;
@@ -1107,10 +1108,31 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateX(-50%);  /* Adjusts the position to exactly center the content */
 }
 
+.social-icons {
+  display: flex;
+  gap: 30px;              /* 🔧 Increase spacing here */
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 12px;    /* Optional: more space above copyright */
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.1);
+}
+
 .facebook-icon {
-  font-size: 35px;  /* Increase icon size */
+  font-size: 35px;
   color: white;
 }
+
 
 .footer-right {
   display: flex;
