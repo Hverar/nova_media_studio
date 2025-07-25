@@ -10,17 +10,17 @@
 
     <!-- Navigation -->
     <div class="hero-nav">
-      <%= link_to t("nav.home"), root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
-      <%= link_to t("nav.services"), services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
-      <%= link_to t("nav.portfolio"), portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
-      <%= link_to t("nav.consultation"), join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
+      <%= link_to "Home", root_path, class: ("nav-link #{current_page?(root_path) ? 'active' : ''}") %>
+      <%= link_to "Services", services_path, class: ("nav-link #{current_page?(services_path) ? 'active' : ''}") %>
+      <%= link_to "Portfolio", portfolio_path, class: ("nav-link #{current_page?(portfolio_path) ? 'active' : ''}") %>
+      <%= link_to "Consultation", join_us_path, class: ("nav-link #{current_page?(join_us_path) ? 'active' : ''}") %>
     </div>
 
     <!-- Centered Text -->
-    <div class="hero-text">
-      <h1><%= t("hero.title") %></h1>
-      <p><%= t("hero.subtitle") %></p>
-      <a href="#" id="openModalBtn2" class="cta-button"><%= t("hero.cta") %></a>
+    <div class="hero-text" data-aos="fade-left">
+      <h1>YOUR BRAND, YOUR WEB.</h1>
+      <p>Custom websites built for your business identity.</p>
+      <a href="#" id="openModalBtn2" class="cta-button">TALK TO AN EXPERT</a>
     </div>
   </div>
 </div>
@@ -31,38 +31,38 @@
 <div class="web-service-box">
   <div class="web-service-image">
     <img src="/assets/eee.jpg" alt="Web Design Sketches">
-    <div class="web-service-tag"><%= t("web_service.tagline") %></div>
+    <div class="web-service-tag">Tailored to your brand, from A to Z</div>
   </div>
 
   <div class="web-service-steps">
-    <h3><%= t("steps.title") %></h3>
+    <h3>STEPS</h3>
     <div class="step-grid">
       <div class="step-item">
         <i class="fa-solid fa-dice-one step-icon"></i>
         <div>
-          <strong><%= t("steps.one.title") %></strong>
-          <p><%= t("steps.one.desc") %></p>
+          <strong>Creative Kickoff</strong>
+          <p>We begin by understanding your goals, vision, and brand identity through a collaborative session.</p>
         </div>
       </div>
       <div class="step-item">
         <i class="fa-solid fa-dice-two step-icon"></i>
         <div>
-          <strong><%= t("steps.two.title") %></strong>
-          <p><%= t("steps.two.desc") %></p>
+          <strong>UX & Design Mockups</strong>
+          <p>Our designers craft intuitive layouts and visuals tailored to your audience.</p>
         </div>
       </div>
       <div class="step-item">
         <i class="fa-solid fa-dice-three step-icon"></i>
         <div>
-          <strong><%= t("steps.three.title") %></strong>
-          <p><%= t("steps.three.desc") %></p>
+          <strong>Responsive Development</strong>
+          <p>We build your site using modern frameworks that look great on every screen.</p>
         </div>
       </div>
       <div class="step-item">
         <i class="fa-solid fa-dice-four step-icon"></i>
         <div>
-          <strong><%= t("steps.four.title") %></strong>
-          <p><%= t("steps.four.desc") %></p>
+          <strong>Optimization & Launch</strong>
+          <p>Once tested and polished, we deploy your site with SEO best practices and ongoing support options.</p>
         </div>
       </div>
     </div>
@@ -72,22 +72,59 @@
 <!-- About Section -->
 <hr style="width: 100%; max-width: 90%; margin: 40px auto 20px auto; border: none; border-top: 1px solid #ccc;">
 <div class="about-section" style="padding: 30px 20px 60px; text-align: center;">
-  <h2 style="font-size: 2.75rem; font-weight: 800; color: #1a1a1a;"><%= t("about.title") %></h2>
+  <h2 style="font-size: 2.75rem; font-weight: 800; color: #1a1a1a;">ABOUT</h2>
   <div style="margin: 16px auto 24px; width: 120px; height: 3px; background-color: #1a1a1a; border-radius: 2px;"></div>
 
-  <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px;"><%= t("about.tagline") %></p>
+  <p style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px;">At NovaMedia Studio,</p>
   <p style="max-width: 850px; margin: 0 auto; font-size: 1.15rem; font-weight: 500; line-height: 1.8;">
-    <%= t("about.description") %>
+    We specialize in custom web design and development. Our team is committed to delivering quality work, combining creativity, technical skill, and attention to detail to fully satisfy our clients.
   </p>
+</div>
+
+<!-- About Cards Grid -->
+<div class="about-card-grid" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; margin: 40px auto; max-width: 1100px;">
+  <div class="about-card" style="flex: 1 1 280px; padding: 20px; border: 1px solid #eee; border-radius: 16px; text-align: left;">
+    <i class="fa-solid fa-user-check" style="font-size: 1.5rem; color: #1a1a1a; margin-bottom: 12px;"></i>
+    <h4 style="font-weight: 700; color: #1a1a1a;">Client-Centered Approach</h4>
+    <p>We work closely with you to ensure the project meets your vision, goals, and timelines.</p>
+  </div>
+
+  <div class="about-card" style="flex: 1 1 280px; padding: 20px; border: 1px solid #eee; border-radius: 16px; text-align: left;">
+    <i class="fa-solid fa-brain" style="font-size: 1.5rem; color: #1a1a1a; margin-bottom: 12px;"></i>
+    <h4 style="font-weight: 700; color: #1a1a1a;">Creative & Strategic</h4>
+    <p>Our team brings fresh ideas and practical solutions to every project we touch.</p>
+  </div>
+
+  <div class="about-card" style="flex: 1 1 280px; padding: 20px; border: 1px solid #eee; border-radius: 16px; text-align: left;">
+    <i class="fa-solid fa-chart-column" style="font-size: 1.5rem; color: #1a1a1a; margin-bottom: 12px;"></i>
+    <h4 style="font-weight: 700; color: #1a1a1a;">Performance Driven</h4>
+    <p>We focus on results, ensuring that your site performs well and supports your growth.</p>
+  </div>
+</div>
+
+<!-- Quote Section -->
+<hr style="width: 100%; max-width: 90%; margin: 60px auto 40px auto; border: none; border-top: 1px solid #ccc;">
+
+<div class="quote-section" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 40px; padding: 40px 20px; max-width: 1200px; margin: 0 auto;">
+  <div class="quote-box" style="flex: 1 1 420px; background-color: #f9f9f9; padding: 30px 24px; border-radius: 12px; box-shadow: 0 6px 20px rgba(0,0,0,0.06); text-align: center;">
+    <p style="font-weight: 600; margin-bottom: 12px;">Let’s bring your ideas to life</p>
+    <h3 style="font-size: 1.75rem; font-weight: 800; margin: 0 0 12px;">Looking for your next website?</h3>
+    <h3 style="font-size: 1.75rem; font-weight: 800; margin-bottom: 24px;">We’ve got you covered.</h3>
+    <a href="#" id="openModalBtn2" class="cta-button">BOOK A CONSULTATION</a>
+  </div>
+
+  <div class="quote-image" style="flex: 1 1 420px; max-width: 500px;">
+    <img src="/assets/consultation.jpg" alt="Modern web design" style="width: 100%; border-radius: 12px; display: block;">
+  </div>
 </div>
 
 <!-- Footer -->
 <footer class="footer">
   <div class="footer-left">
-    <a href="<%= root_path %>"><%= t("nav.home") %></a>
-    <a href="<%= services_path %>"><%= t("nav.services") %></a>
-    <a href="<%= portfolio_path %>"><%= t("nav.portfolio") %></a>
-    <a href="<%= join_us_path %>"><%= t("nav.consultation") %></a>
+    <a href="<%= root_path %>">Home</a>
+    <a href="<%= services_path %>">Services</a>
+    <a href="<%= portfolio_path %>">Portfolio</a>
+    <a href="<%= join_us_path %>">Consultation</a>
   </div>
 
   <div class="center-content">
@@ -103,9 +140,5 @@
       </a>
     </div>
     <span>Copyright © 2025 NovaMedia Studio</span>
-  </div>
-
-  <div class="footer-right">
-    <span>Powered by NovaMedia Studio</span>
   </div>
 </footer>
